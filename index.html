@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilshad - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(5, 5, 62);
+        font-family: 'Poppins', 'sans-serif';
+        color: white;
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(7, 7, 92);
+        padding: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: rgb(97, 97, 215);
+        font-size: 1.02rem;
+    }
+
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        margin: 23px 0;
+        align-items: center;
+    }
+
+    .firstSection>div {
+        width: 30%;
+    }
+
+    .rightSection img {
+        width: 80%;
+        margin: 50px 0;
+    }
+
+    .leftSection {
+        font-size: 1.5rem;
+
+
+    }
+    .leftSection .btn{
+        background-color: rgb(73, 2, 186);
+        color: white;
+        padding: 7px 10px;
+        border: 1px solid rgb(134, 131, 131);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .leftSection .btn:hover{
+        background-color: rgb(47, 4, 117);
+        color: white;
+        padding: 7px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        
+    }
+    .purple {
+        color: purple;
+    }
+
+    #element {
+        color: rgb(114, 114, 237);
+    }
+
+    main hr {
+        border: 0;
+        background-color: #9c97f1;
+        height: 1px;
+        margin: 40px 84px;
+    }
+
+    .secondSection {
+        margin-left: 100px;
+        margin-top: 50px;
+        max-width: 80vw;
+        height: 80vh;
+    }
+
+    .secondSection span {
+        color: gray;
+    }
+
+    .secondSection .box {
+        background-color: white;
+        width: 80vw;
+        height: 1px;
+        margin: 56px 0;
+        display: flex;
+    }
+
+    .secondSection .box .vertical {
+        background-color: white;
+        width: 1px;
+        height: 100px;
+        margin: 0 120px;
+    }
+
+    .box div img {
+        height: 30px;
+        width: 20px;
+        position: relative;
+        top: -40px;
+        left: -8px;
+    }
+
+    .box div .vertical-title {
+        position: relative;
+        top: 70px;
+        left: -30px;
+        width: 200px;
+        font-size: 12px;
+    }
+
+    .box div .vertical-desc {
+        position: relative;
+        top: 90px;
+        left: -35px;
+        width: 200px;
+        font-size: 9px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        margin: 60px 12px;
+        height: 200px;
+        background-color: #161618;
+    }
+
+    .footer div ul {
+        list-style: none;
+    }
+
+    .footer>div {
+        width: 220px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Dilshad's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li> <a href="">Home </a> </li>
+                    <li> <a href="">About </a> </li>
+                    <li> <a href="">Services </a> </li>
+                    <li> <a href="">Projects </a> </li>
+                    <li> <a href="">Contact Me</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My Name is <span class="purple"> Dilshad </span>
+                <div>
+                    <div>
+                        and I am a passionate
+                    </div>
+                    <span id="element"></span>
+                    <div>
+                        I have five + years of experience in Full Stack Development in .Net, MERN and Cloud.
+                    </div>
+                    <div >
+                        <button class="btn">Download Resume</button>
+                        <button class="btn">View GitHub</button>
+                    </div>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg3.png" alt="">
+            </div>
+
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-grey"> What I have done so far</span>
+            <h1>
+
+                Work Experience
+            </h1>
+            <div class="box">
+                <div class="vertical">
+                    <img src="developer.png" alt="">
+                    <div class="vertical-title">.Net Developer at Accenture Pvt Ltd(Sep 2017- Jan 2019)</div>
+                    <div class="vertical-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex molestias
+                        quas excepturi explicabo quidem ipsum et exercitationem quia optio earum maiores repellendus
+                        quam quaerat facere vero est, neque ad architecto?</div>
+                </div>
+                <div class="vertical">
+                    <img src="developer.png" alt="">
+                    <div class="vertical-title">.Net and MERN Full Stack developer at Inube Solutions(Jan 2019 - March
+                        2022)</div>
+                    <div class="vertical-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex molestias
+                        quas excepturi explicabo quidem ipsum et exercitationem quia optio earum maiores repellendus
+                        quam quaerat facere vero est, neque ad architecto?</div>
+                </div>
+                <div class="vertical">
+                    <img src="developer.png" alt="">
+                    <div class="vertical-title">.Net and MERN Full Stack developer CommonWealth Bank Pvt Ltd(March 2022-
+                        June 2022)</div>
+                    <div class="vertical-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex molestias
+                        quas excepturi explicabo quidem ipsum et exercitationem quia optio earum maiores repellendus
+                        quam quaerat facere vero est, neque ad architecto?</div>
+                </div>
+                <div class="vertical">
+                    <img src="developer.png" alt="">
+                    <div class="vertical-title">.Net, MERN and Cloud Developer at SLK Pvt Ltd(Nov 2013- until Now)</div>
+                    <div class="vertical-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex molestias
+                        quas excepturi explicabo quidem ipsum et exercitationem quia optio earum maiores repellendus
+                        quam quaerat facere vero est, neque ad architecto?</div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3> Dilshad's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Devops Engineer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
