@@ -15,18 +15,19 @@
     * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
     body {
         background-color: rgb(5, 5, 62);
         font-family: 'Poppins', 'sans-serif';
         color: white;
-
     }
 
     nav {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
         background-color: rgb(7, 7, 92);
         padding: 20px;
     }
@@ -34,10 +35,10 @@
     nav ul {
         display: flex;
         justify-content: space-around;
+        list-style: none;
     }
 
     nav ul li {
-        list-style: none;
         margin: 0 10px;
     }
 
@@ -60,39 +61,40 @@
         justify-content: space-around;
         margin: 23px 0;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .firstSection>div {
-        width: 30%;
+        width: 45%;
+        min-width: 300px;
     }
 
     .rightSection img {
-        width: 80%;
+        width: 100%;
         margin: 50px 0;
     }
 
     .leftSection {
         font-size: 1.5rem;
-
-
     }
-    .leftSection .btn{
+
+    .leftSection .btn {
         background-color: rgb(73, 2, 186);
         color: white;
         padding: 7px 10px;
         border: 1px solid rgb(134, 131, 131);
         border-radius: 5px;
         cursor: pointer;
+        margin-right: 10px;
+    }
+    .leftSection a {
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .leftSection .btn:hover {
+        background-color: rgb(47, 4, 117);
     }
 
-    .leftSection .btn:hover{
-        background-color: rgb(47, 4, 117);
-        color: white;
-        padding: 7px 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        
-    }
     .purple {
         color: purple;
     }
@@ -109,10 +111,9 @@
     }
 
     .secondSection {
-        margin-left: 100px;
+        margin-left: 10%;
         margin-top: 50px;
         max-width: 80vw;
-        height: 80vh;
     }
 
     .secondSection span {
@@ -120,59 +121,66 @@
     }
 
     .secondSection .box {
-        background-color: white;
-        width: 80vw;
-        height: 1px;
-        margin: 56px 0;
         display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
     }
 
     .secondSection .box .vertical {
         background-color: white;
-        width: 1px;
-        height: 100px;
-        margin: 0 120px;
+        color: black;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
     }
 
     .box div img {
         height: 30px;
         width: 20px;
-        position: relative;
-        top: -40px;
-        left: -8px;
-    }
-
-    .box div .vertical-title {
-        position: relative;
-        top: 70px;
-        left: -30px;
-        width: 200px;
-        font-size: 12px;
-    }
-
-    .box div .vertical-desc {
-        position: relative;
-        top: 90px;
-        left: -35px;
-        width: 200px;
-        font-size: 9px;
     }
 
     .footer {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         padding: 20px;
         margin: 60px 12px;
-        height: 200px;
         background-color: #161618;
-    }
-
-    .footer div ul {
-        list-style: none;
     }
 
     .footer>div {
         width: 220px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        .firstSection>div {
+            width: 90%;
+        }
+
+        main hr {
+            margin: 20px 0;
+        }
+
+        .secondSection {
+            margin-left: 5%;
+        }
     }
 </style>
 
@@ -203,22 +211,20 @@
                     <div>
                         I have five + years of experience in Full Stack Development in .Net, MERN and Cloud.
                     </div>
-                    <div >
-                        <button class="btn">Download Resume</button>
-                        <button class="btn">View GitHub</button>
+                    <div>
+                        <button id="downloadResume" class="btn">Download Resume</button>
+                        <a href="https://github.com/dillu786" class="btn" target="_blank">View GitHub</a>
                     </div>
                 </div>
             </div>
             <div class="rightSection">
                 <img src="bg3.png" alt="">
             </div>
-
         </section>
         <hr>
         <section class="secondSection">
             <span class="text-grey"> What I have done so far</span>
             <h1>
-
                 Work Experience
             </h1>
             <div class="box">
@@ -253,8 +259,6 @@
                         quam quaerat facere vero est, neque ad architecto?</div>
                 </div>
             </div>
-
-
         </section>
     </main>
     <footer>
@@ -291,8 +295,17 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Devops Engineer'],
+            strings: ['Web Developer', 'DevOps Engineer'],
             typeSpeed: 50,
+        });
+
+        document.getElementById('downloadResume').addEventListener('click', function () {
+            const link = document.createElement('a');
+            link.href = 'path_to_your_resume.pdf'; // Update this with the correct path to your resume file
+            link.download = 'Dilshad_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     </script>
 </body>
